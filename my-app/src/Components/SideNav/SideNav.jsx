@@ -14,7 +14,7 @@ export default function SideNav() {
           Prelim
         </NavLink>
         <NavLink to="/quiz" className={({ isActive }) => isActive ? 'link active' : 'link'}>
-          Quiz
+          Quiz Maker
         </NavLink>
         <NavLink to="/shopping" className={({ isActive }) => isActive ? 'link active' : 'link'}>
           Shopping
@@ -24,6 +24,12 @@ export default function SideNav() {
         </NavLink>
         <NavLink to="/app2" className={({ isActive }) => isActive ? 'link active' : 'link'}>
           Fruits
+        </NavLink>
+        <NavLink to="/calculator" className={({ isActive }) => isActive ? 'link active' : 'link'}>
+          Calculator
+        </NavLink>
+        <NavLink to="/academics" className={({ isActive }) => isActive ? 'link active' : 'link'}>
+          Academic Manager
         </NavLink>
       </nav>
     </aside>

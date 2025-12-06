@@ -1,52 +1,98 @@
 :root {
-  --bg: #0f172a;
-  --panel: #111827;
-  --accent: #3b82f6;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
+  /* The main background color (Creamy/Off-white) */
+  --surface: #EFEEEE;
+  
+  /* The Light Brown accent color (from the screenshot buttons) */
+  --brown-accent: #D7C0A5;
+  
+  /* Text Colors */
+  --text-main: #6D5D53;
+  --text-muted: #9E8E83;
+  --text-active: #FFFFFF; /* White text on the brown button */
+
+  /* Shadows for the creamy background */
+  /* Darker shadow (bottom-right) */
+  --shadow-dark: #C6C2BC; 
+  /* Lighter shadow (top-left) */
+  --shadow-light: #FFFFFF;
+
+  /* Shadows specifically for the Brown Button (Active State) */
+  --brown-shadow-dark: #b6a38c;
+  --brown-shadow-light: #f8ddbe;
 }
 
 .side-nav {
   width: 240px;
-  min-height: 100vh;
-  background: var(--panel);
-  border-right: 1px solid #1f2937;
+  height: 100vh;
+  background: var(--surface);
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  position: sticky;
+  padding: 24px 20px; /* Increased padding slightly for look */
+  position: fixed;
+  left: 0;
   top: 0;
+  overflow: hidden;
+  /* Soft shadow on the right side of the nav */
+  box-shadow: 12px 0 24px var(--shadow-dark);
+  font-family: sans-serif; /* Ensure a clean font */
 }
 
-.brand {
-  color: var(--text);
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.4px;
-  margin-bottom: 12px;
+.brand { 
+  color: var(--text-main); 
+  font-weight: 800; 
+  font-size: 22px; 
+  letter-spacing: 0.5px; 
+  margin-bottom: 30px; 
+  padding-left: 10px;
 }
 
-.nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+.nav-links { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
 }
 
+/* --- DEFAULT LINK STYLE --- */
 .link {
-  color: var(--muted);
+  color: var(--text-muted);
   text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 8px;
-  transition: background 0.2s ease, color 0.2s ease;
+  padding: 14px 20px;
+  border-radius: 50px; /* Fully rounded 'pill' shape like the image */
+  background: var(--surface);
+  font-weight: 600;
+  font-size: 15px;
+  
+  /* The "Raised" Neumorphic Effect */
+  box-shadow: 
+    6px 6px 12px var(--shadow-dark), 
+    -6px -6px 12px var(--shadow-light);
+    
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
-.link:hover {
-  background: #1f2937;
-  color: var(--text);
+.link:hover { 
+  color: var(--brown-accent);
+  transform: translateY(-2px); /* Slight lift on hover */
 }
 
+/* --- ACTIVE STATE (The Light Brown Button) --- */
 .link.active {
-  background: #1f2937;
-  color: var(--text);
-  outline: 2px solid var(--accent);
+  background-color: var(--brown-accent);
+  color: var(--text-active);
+  
+  /* Option A: If you want it to look "Pressed In" (Inset) 
+     Uncomment the line below and remove Option B.
+  */
+  /* box-shadow: inset 4px 4px 8px var(--brown-shadow-dark), inset -4px -4px 8px var(--brown-shadow-light); */
+
+  /* Option B: If you want it to look "Raised" but colored (Like the 'BUTTON' in your image)
+     Use this one:
+  */
+  box-shadow: 
+    6px 6px 12px var(--shadow-dark), 
+    -6px -6px 12px var(--shadow-light);
+  
+  transform: translateY(0); /* Reset lift */
 }

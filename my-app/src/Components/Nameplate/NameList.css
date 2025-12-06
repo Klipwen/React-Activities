@@ -1,0 +1,122 @@
+/* NameList.css */
+
+.name-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* Centers vertically */
+  padding: 20px;
+}
+
+.name-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 30px;
+  background: var(--surface); /* From your global vars */
+  text-align: center;
+  
+  /* Neumorphic "Raised" Shadow */
+  box-shadow: 12px 12px 24px var(--shadow-dark), 
+              -12px -12px 24px var(--shadow-light);
+}
+
+.name-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--brown-accent); /* The Gold/Brown color */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px var(--shadow-dark), -2px -2px 4px var(--shadow-light);
+}
+
+.details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  background: var(--surface);
+  padding: 20px;
+  border-radius: 20px;
+  
+  /* "Pressed" Inset look for the details area */
+  box-shadow: inset 5px 5px 10px var(--shadow-dark), 
+              inset -5px -5px 10px var(--shadow-light);
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding-bottom: 8px;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.value {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* --- BUTTON CONTROLS --- */
+.controls-area {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.nav-btn {
+  flex: 1; /* This makes both buttons EQUAL width */
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  
+  /* Default "Raised" State */
+  background: var(--surface);
+  color: var(--text-muted);
+  box-shadow: 5px 5px 10px var(--shadow-dark), 
+              -5px -5px 10px var(--shadow-light);
+}
+
+.nav-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  color: var(--text-main);
+}
+
+.nav-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+              inset -3px -3px 6px var(--shadow-light);
+}
+
+/* Primary "Next" Button Style */
+.nav-btn.primary {
+  background: linear-gradient(145deg, var(--brown-accent), #c0a060);
+  color: white;
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.counter {
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}

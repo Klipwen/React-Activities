@@ -1,36 +1,11 @@
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  margin-right: 30px;
-  width: 150px;
-  color: var(--text);
-}
+.sidebar { display: flex; flex-direction: column; margin-right: 30px; width: 150px; color: var(--text); }
 
-.sidebar-title {
-  text-align: center;
-}
+.sidebar-title { text-align: center; }
 
-.category-button {
-  margin: 5px 0;
-  padding: 10px 15px;
-  background: #1f2937;
-  color: var(--text);
-  border: 1px solid #334155;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 0.2s ease, transform .15s ease;
-}
+.category-button { margin: 5px 0; padding: 10px 15px; background: var(--surface); color: var(--text); border: none; border-radius: 12px; cursor: pointer; text-align: left; box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light); transition: box-shadow .15s ease; }
 
-.category-button:hover {
-  background: #111827;
-  transform: translateY(-2px);
-}
+.category-button:hover { box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light); }
 
-.category-button.active {
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
-}
+.category-button.active { box-shadow: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light); color: var(--accent); }
 
-.category-button.active:hover {
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
-}
+.category-button.active:hover { box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light); }

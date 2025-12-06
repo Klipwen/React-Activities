@@ -8,6 +8,8 @@ import ShoppingPage from './Pages/ShoppingPage';
 import JuenPage from './Pages/JuenPage';
 import NameplatePage from './Pages/NameplatePage';
 import App2Page from './Pages/App2Page';
+import AcademicsPage from './Pages/AcademicsPage';
+import CalculatorPage from './Pages/CalculatorPage';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path="/shopping" element={<ShoppingPage />} />
           <Route path="/nameplate" element={<NameplatePage />} />
           <Route path="/app2" element={<App2Page />} />
+          <Route path="/academics" element={<AcademicsPage />} />
+          <Route path="/calculator" element={<CalculatorPage />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </div>

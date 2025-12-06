@@ -20,7 +20,8 @@ export default function App2Page() {
             value={fruitInput}
             onChange={(e) => setFruitInput(e.target.value)}
             placeholder="Enter a fruit"
-            style={{ flex: 1, padding: 10, borderRadius: 8, border: '1px solid #334155', background: '#0f172a', color: '#e5e7eb' }}
+            className="input"
+            style={{ flex: 1 }}
           />
           <button className="btn btn-primary" onClick={addFruit}>Add</button>
         </div>
